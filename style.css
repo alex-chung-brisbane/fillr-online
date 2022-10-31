@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Ubuntu+Mono&display=swap');
+
+:root {
+    /*Color palette*/
+    --col-primary-text: #1c2321;
+    --col-dark: #5e6572;
+    --col-mid: #7d98a1;
+    --col-light: #a9b4c2;
+    --col-bg: #eef1ef;
+
+    /*Fonts*/
+    --font-primary: 'Montserrat', sans-serif;
+    --font-code: 'Ubuntu Mono', monospace;
+}
+
+html, body {
+    font-family: var(--font-primary);
+    font-weight: normal;
+}
