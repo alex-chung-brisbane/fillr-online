@@ -11,9 +11,112 @@
     /*Fonts*/
     --font-primary: 'Montserrat', sans-serif;
     --font-code: 'Ubuntu Mono', monospace;
+
+    --borders: 5px;
+    --page-min-h: 500px;
 }
 
 html, body {
     font-family: var(--font-primary);
     font-weight: normal;
+    color: var(--col-primary-text);
+}
+
+body {
+    margin: 0;
+    background-color: var(--col-bg);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    min-height: var(--page-min-h);
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1.5fr 1.5fr;
+    gap: var(--borders);
+    grid-auto-flow: row;
+    grid-template-areas:
+    "page-title page-title"
+    "input-pane settings-pane"
+    "output-pane settings-pane";
+    padding: var(--borders);
+}
+
+.page-title {
+    grid-area: page-title;
+    text-align: center;
+    background-color: var(--col-dark);
+    color: white;
+}
+
+.settings-pane {
+    grid-area: settings-pane;
+    background-color: var(--col-mid);
+    display: flex;
+    flex-direction: column;
+    padding: 5% 2.5%;
+    gap: 2.5%;
+}
+
+.settings-pane > input {
+    border-radius: 5px;
+    font-size: 1.2em;
+    overflow: auto;
+    font-family: var(--font-code);
+    padding: 2.5%;
+    border: none;
+}
+
+.settings-pane > button {
+    border-radius: 5px;
+    font-size: 1.2em;
+    overflow: auto;
+    font-family: var(--font-code);
+    padding: 2.5%;
+    border: none;
+    cursor: pointer;
+}
+
+#variables {
+    border-radius: 5px;
+    font-size: 1.2em;
+    overflow: auto;
+    font-family: var(--font-code);
+    padding: 5%;
+    border: 1px solid var(--col-dark);
+    max-height: 50%;
+}
+
+.text-pane {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-pane > textarea {
+    font-family: var(--font-code);
+    font-size: 1.2em;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    height: 100%;
+}
+
+.input-pane {
+    grid-area: input-pane;
+    background-color: var(--col-light);
+}
+
+.output-pane {
+    grid-area: output-pane;
+    background-color: var(--col-light);
 }

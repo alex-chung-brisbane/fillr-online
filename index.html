@@ -5,10 +5,27 @@
     <title>Fillr Online</title>
     <!--TODO: Project icon-->
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
 </head>
 <body>
-
+<div class="container">
+    <div class="page-title"><h1>Fillr v3</h1></div>
+    <div class="settings-pane">
+        <input type="text" name="Input" id="input" placeholder="Input value">
+        <button id="submit" onclick="InsertVal()">Insert value [Enter]</button>
+        <select name="Variables" id="variables" size="2">
+            <option value="var1">var1</option>
+        </select>
+    </div>
+    <div class="input-pane text-pane">
+        <textarea name="Input area" id="input-area" placeholder="Template text"></textarea>
+    </div>
+    <div class="output-pane text-pane">
+        <textarea name="Output area" id="output-area" placeholder="Output"></textarea>
+    </div>
+</div>
 </body>
 </html>
