@@ -16,12 +16,12 @@
     <div class="settings-pane">
         <input type="text" name="Input" id="input" placeholder="Input value">
         <button id="submit" onclick="InsertVal()">Insert value [Enter]</button>
-        <select name="Variables" id="variables" size="2">
-            <option value="var1">var1</option>
+        <select name="Variables" id="variables" size="2" disabled>
+            <option value="">Use ` to surround your vars in template text - e.g. `var_1`</option>
         </select>
     </div>
     <div class="input-pane text-pane">
-        <textarea name="Input area" id="input-area" placeholder="Template text"></textarea>
+        <textarea name="Input area" id="input-area" placeholder="Template text" oninput="UpdateVars()"></textarea>
     </div>
     <div class="output-pane text-pane">
         <textarea name="Output area" id="output-area" placeholder="Output"></textarea>
